@@ -20,7 +20,7 @@ repositories {
 dependencies {
     implementation("org.apache.commons:commons-lang3:3.13.0")
     implementation("info.picocli:picocli:4.7.6")
-    implementation("com.fasterxml.jackson.core:jackson-databind:2.14.1")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.0")
 }
 
 tasks.test {
