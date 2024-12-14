@@ -1,14 +1,17 @@
 package hexlet.code;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
 import java.io.File;
+import java.util.Map;
+import java.util.concurrent.Callable;
 
 @Command(name = "gendiff", mixinStandardHelpOptions = true, version = "gendiff 1.0", description = "Compares two configuration files and shows a difference")
-class App implements Runnable {
+class App implements Callable<Integer> {
 
     @Parameters(index = "0", description = "path to first file")
     private File filepath1;
@@ -18,11 +21,14 @@ class App implements Runnable {
     private String format;
 
     @Override
-    public void run() {
+    public Integer call() throws Exception {
+        System.out.println(Differ.generate("file1.json", "file2.json", ""));
+        return 0;
     }
 
     public static void main(String... args) {
         int exitCode = new CommandLine(new App()).execute(args);
         System.exit(exitCode);
     }
+
 }
