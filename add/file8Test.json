@@ -1,7 +1,0 @@
-{
-  "Connection": "keep-alive header",
-  "CF-Cache-Status": "DYNAMIC-1",
-  "Content-Length": 2000,
-  "name": "quest",
-  "availability": true
-}

@@ -1,4 +1,3 @@
-
 package hexlet.code;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -7,10 +6,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-<<<<<<< HEAD
-=======
 import java.util.TreeMap;
->>>>>>> 3e31ec73ac0eaad17e68207eaa07b407ad16c68c
 import java.util.stream.Collectors;
 
 public class Differ {
@@ -25,7 +21,6 @@ public class Differ {
         keyList1.addAll(keyList2);
 
         List<String> distinctList = keyList1.stream().distinct().sorted().collect(Collectors.toList());
-<<<<<<< HEAD
 
         StringBuilder result = new StringBuilder();
 
@@ -44,23 +39,6 @@ public class Differ {
             }
         }
         return result.toString();
-=======
-        for (String key : distinctList) {
-            if (map1.containsKey(key) && !map2.containsKey(key)) {
-                System.out.println("- " + key + ": " + map1.get(key));
-            } else if (map1.containsKey(key) && map2.containsKey(key)) {
-                if (map1.get(key).equals(map2.get(key))) {
-                    System.out.println("  " + key + ": " + map1.get(key));
-                } else {
-                    System.out.println("- " + key + ": " + map1.get(key));
-                    System.out.println("+ " + key + ": " + map2.get(key));
-                }
-            } else if (!map1.containsKey(key) && map2.containsKey(key)) {
-                System.out.println("+ " + key + ": " + map2.get(key));
-            }
-        }
-        return null;
->>>>>>> 3e31ec73ac0eaad17e68207eaa07b407ad16c68c
     }
 
     public static Map getData(String content) throws Exception {
