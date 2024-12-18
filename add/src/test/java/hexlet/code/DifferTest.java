@@ -6,12 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DifferTest {
 
-    String testDeleteDouble = "{\n"
-            + "  \"availability\": false\n}"
-            + "  \"bf-Cache-Status\": \"DYNAMIC\",\n"
-            + "  \"connection\": \"keep-alive\",\n"
-            + "  \"t-Content-Length\": 1105,\n"
-            + "}";
+    String testDeleteDouble =
+            "  \"availability\": false,"
+                    + "  \"bf-Cache-Status\": \"DYNAMIC\","
+                    + "  \"connection\": \"keep-alive\","
+                    + "  \"t-Content-Length\": 1105";
 
     @Test
     public void deleteDoubleTest() throws Exception {
@@ -22,13 +21,12 @@ public class DifferTest {
         assertEquals(testDeleteDouble, Differ.generate(filepath1, filepath2, "json"));
     }
 
-    String testNotAddSecondFile = "{\n"
-            + "- \"availability\": false\n"
-            + "- \"bf-Cache-Status\": \"DYNAMIC\",\n"
-            + "- \"connection\": \"keep-alive\",\n"
-            + "+ \"follow\": true\n}"
-            + "- \"t-Content-Length\": 1105,\n"
-            + "}";
+    String testNotAddSecondFile =
+            "- \"availability\": false,"
+                    + "- \"bf-Cache-Status\": \"DYNAMIC\","
+                    + "- \"connection\": \"keep-alive\","
+                    + "+ \"follow\": true,"
+                    + "- \"t-Content-Length\": 1105";
 
     @Test
     public void notAddSecondFile() throws Exception {
@@ -39,12 +37,11 @@ public class DifferTest {
         assertEquals(testNotAddSecondFile, Differ.generate(filepath3, filepath4, "json"));
     }
 
-    String testAddSecondFile = "{\n"
-            + "-  \"follow\": false"
-            + "+  \"name\": \"admin\"\n"
-            + "+  \"timeout\": 110,\n"
-            + "+  \"verbose\": false,\n"
-            + "}";
+    String testAddSecondFile =
+            "- \"follow\": false,"
+                    + "+ \"name\": \"admin\","
+                    + "+ \"timeout\": 110,"
+                    + "+ \"verbose\": false";
 
     @Test
     public void addSecondFile() throws Exception {
@@ -55,14 +52,13 @@ public class DifferTest {
         assertEquals(testAddSecondFile, Differ.generate(filepath5, filepath6, "json"));
     }
 
-    String testAddAndNotSecondFile = "{\n"
-            + "- \"name\": \"admin\"\n"
-            + "+ \"name\": \"quest\"\n"
-            + "- \"timeout\": 110,\n"
-            + "+ \"timeout\": 111,\n"
-            + "-  \"verbose\": false,\n"
-            + "+ \"verbose\": true,\n"
-            + "}";
+    String testAddAndNotSecondFile =
+            "- \"name\": \"admin\","
+                    + "+ \"name\": \"quest\","
+                    + "- \"timeout\": 110,"
+                    + "+ \"timeout\": 111,"
+                    + "- \"verbose\": false,"
+                    + "+ \"verbose\": true";
 
     @Test
     public void addAndNotSecondFile() throws Exception {
