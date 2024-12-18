@@ -1,19 +1,30 @@
 package hexlet.code;
 
+<<<<<<< HEAD
 //import com.fasterxml.jackson.databind.ObjectMapper;
 
+=======
+import com.fasterxml.jackson.databind.ObjectMapper;
+>>>>>>> 3e31ec73ac0eaad17e68207eaa07b407ad16c68c
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
 import java.io.File;
+<<<<<<< HEAD
 //import java.util.Map;
 import java.util.concurrent.Callable;
 
 @Command(name = "gendiff", mixinStandardHelpOptions = true,
         version = "gendiff 1.0",
         description = "Compares two configuration files and shows a difference")
+=======
+import java.util.Map;
+import java.util.concurrent.Callable;
+
+@Command(name = "gendiff", mixinStandardHelpOptions = true, version = "gendiff 1.0", description = "Compares two configuration files and shows a difference")
+>>>>>>> 3e31ec73ac0eaad17e68207eaa07b407ad16c68c
 class App implements Callable<Integer> {
 
     @Parameters(index = "0", description = "path to first file")
@@ -36,4 +47,8 @@ class App implements Callable<Integer> {
         System.exit(exitCode);
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3e31ec73ac0eaad17e68207eaa07b407ad16c68c
