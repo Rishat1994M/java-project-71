@@ -12,7 +12,6 @@ plugins {
 application {
     mainClass.set("hexlet.code.App")
     applicationName = "app"
-    mainClass = "org.gradle.MyMain"
 }
 group = "hexlet.code"
 version = "1.0-SNAPSHOT"
@@ -58,4 +57,13 @@ tasks.test {
     finalizedBy(tasks.jacocoTestReport)
 }
 
-tasks.jacocoTestReport { reports { xml.required.set(true) } }
+tasks.jacocoTestReport {
+    reports {
+        dependsOn(tasks.test) // Убедитесь, что эта строка присутствует
+        reports {
+            xml.required.set(true)
+            //   csv.required.set(false)
+            // html.required.set(true)
+        }
+    }
+}
