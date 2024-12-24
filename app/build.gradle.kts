@@ -41,7 +41,6 @@ tasks.withType<Checkstyle>().configureEach {
     }
 }
 
-
 dependencies {
     implementation("org.apache.commons:commons-lang3:3.13.0")
     implementation("info.picocli:picocli:4.7.6")
