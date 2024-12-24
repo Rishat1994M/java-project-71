@@ -1,6 +1,6 @@
-<a href="https://codeclimate.com/github/Rishat1994M/java-project-71/maintainability"><img src="https://api.codeclimate.com/v1/badges/ff003b1ba7c6c310e52f/maintainability" /></a>
+[![Maintainability](https://api.codeclimate.com/v1/badges/ff003b1ba7c6c310e52f/maintainability)](https://codeclimate.com/github/Rishat1994M/java-project-71/maintainability)
 
-<a href="https://codeclimate.com/github/Rishat1994M/java-project-71/test_coverage"><img src="https://api.codeclimate.com/v1/badges/ff003b1ba7c6c310e52f/test_coverage" /></a>
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ff003b1ba7c6c310e52f/test_coverage)](https://codeclimate.com/github/Rishat1994M/java-project-71/test_coverage)
 
 Вычислитель отличий – программа, определяющая разницу между двумя структурами данных. Это популярная задача, для решения которой существует множество онлайн-сервисов, например: http://www.jsondiff.com/. Подобный механизм используется при выводе тестов или при автоматическом отслеживании изменении в конфигурационных файлах.
 
@@ -23,5 +23,12 @@ numbers: [1, 2, 3] setting1: Value 1
 setting2: 200
 setting3: true
 setting3: {key=value}
-setting4: blah blah }
-Шаг 6: https://asciinema.org/a/zUVH3Ye8HYEKYEHxc8OXqCRxl Шаг 7: https://asciinema.org/a/CHRCXYK4AFhxsbQVI7seMbCvC
+setting4: blah blah 
+
+}
+
+Шаг 6: 
+    https://asciinema.org/a/zUVH3Ye8HYEKYEHxc8OXqCRxl 
+
+Шаг 7: 
+    https://asciinema.org/a/CHRCXYK4AFhxsbQVI7seMbCvC
