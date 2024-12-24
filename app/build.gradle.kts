@@ -57,12 +57,12 @@ tasks.test {
 }
 
 tasks.jacocoTestReport {
-    reports {
-        dependsOn(tasks.test)
+    //reports {
+       // dependsOn(tasks.test)
         reports {
             xml.required.set(true)
             //   csv.required.set(false)
             // html.required.set(true)
-        }
+        //}
     }
 }
