@@ -59,7 +59,7 @@ tasks.test {
 
 tasks.jacocoTestReport {
     reports {
-        dependsOn(tasks.test) // Убедитесь, что эта строка присутствует
+        dependsOn(tasks.test)
         reports {
             xml.required.set(true)
             //   csv.required.set(false)
